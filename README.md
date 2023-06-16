@@ -39,3 +39,22 @@ Check the [index.js](https://github.com/hegde421201/REACT_PROJECTS/blob/main/fir
 
 Congratulations !! You have completed your first React JS app.
 
+## What is JSX ?
+
+JSX (Javascript Script XML) is React's syntax for creating components. 
+It looks like HTML, but instead of just describing the structure of a webpage, you can also include JavaScript code to make your components dynamic and interactive.
+
+Please see this file [Counter](https://github.com/hegde421201/REACT_PROJECTS/blob/main/second-app/src/Counter.js) which has a Counter component in React using JSX.
+
+The component stores the current count in a state variable named count and updates the count using a function called handleClick when the user
+clicks the Increment button. 
+
+Although the JSX code resembles HTML, we've included JavaScript code within curly braces {} to add interactivity to the component. Specifically, we use the count and handleClick variables to display the current count and handle user input.
+
+By using JSX, we can create highly interactive components that respond to user input in real-time. This makes it easy to build dynamic web
+applications that provide an excellent user experience.
+
+Congratulations !! You have completed your second React JS app.
+
+## What do you mean by props ?
+

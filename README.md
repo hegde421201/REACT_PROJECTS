@@ -64,9 +64,11 @@ For example, a parent component could pass the string "Hello, world!" as a prop 
 component that displays that text. Props can be any type of data, including strings, numbers, booleans, objects, and functions.
 
 For example, consider the following component:
+```
 function Greetings(props) {
  return <h1>Hello, {props.name}!</h1>;
 }
+```
 
 See the above example [PropsExample](https://github.com/hegde421201/REACT_PROJECTS/blob/main/second-app/src/PropsExample.js)
 

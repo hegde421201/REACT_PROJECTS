@@ -35,5 +35,7 @@ In this example, we have three components: Header, Main, and Footer.
 Each component is a building block that can be combined to create a more complex application. The 'Component' component uses these three
 components to create a simple layout with a header, main content area, and footer.
 
+Check the [index.js](https://github.com/hegde421201/REACT_PROJECTS/blob/main/first-app/src/index.js) file which includes this Components.js file
+
 Congratulations !! You have completed your first React JS app.
 

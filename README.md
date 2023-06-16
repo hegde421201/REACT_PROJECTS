@@ -25,3 +25,9 @@ is a lightweight JavaScript object that contains all the necessary properties an
 occurs in the user interface, React updates the Virtual DOM first, which is much faster than updating the actual DOM. Then, React compares the previous and updated Virtual DOMs and determines the minimum set of changes required to update the actual DOM. Finally, React applies
 those changes in a batch update to the actual DOM.
 
+## What are Components?
+
+React components are self-contained modules used to create user interfaces. They are the building blocks, representing parts of a larger UI that can be reused throughout an application to improve efficiency and reduce code duplication.
+
+Please see this file []() which contains three components - header, main and footer functions. They are included to form the first React JS application.
+Congratulations

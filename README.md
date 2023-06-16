@@ -58,3 +58,24 @@ Congratulations !! You have completed your second React JS app.
 
 ## What do you mean by props ?
 
+In React, "props" is short for "properties" and is used to pass data from a parent component to a child component. 
+
+For example, a parent component could pass the string "Hello, world!" as a prop to a child
+component that displays that text. Props can be any type of data, including strings, numbers, booleans, objects, and functions.
+
+For example, consider the following component:
+function Greetings(props) {
+ return <h1>Hello, {props.name}!</h1>;
+}
+
+See the above example [PropsExample](https://github.com/hegde421201/REACT_PROJECTS/blob/main/second-app/src/PropsExample.js)
+
+Here, the Greeting component takes a props parameter, which is an object
+containing the name and params properties. The name property is used to render a
+greeting message. Similarly, check the params property.
+
+When the component is used, it can be passed a name prop like so:
+<PropsExample name="Moto" params="Checking" />
+
+In this example, the name prop is passed to the Greeting component with a value of "Moto". The component then renders the message "Hello, Moto!" using the name prop.
+

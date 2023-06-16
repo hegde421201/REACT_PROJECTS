@@ -12,7 +12,7 @@ root.render(
    {
    /*  <Counter /> */
    
-   <PropsExample name="Hegde" params = "GIS"
+   <PropsExample name="Moto" params = "GIS"
    />
    
    

@@ -103,8 +103,8 @@ Anything between the opening and the closing div tag in the index.html is where 
 
 The above code snipped in the index.html file is the container for our entire application.
 
-The Application is the component which returns the Person components which in turn contains heading2 (h2) element inside the HTML.
+The Application is the component which returns the Person component, which in turn, contains heading2 (h2) element inside the HTML.
 As we can see, we put the HTML element of h2 in the middle of Javascript's code as a parameter. That entire line of code is called JSX.
 JSX is Javascript XML. JSX allows us to write HTML in REACT.
 
-The other two components - Message and Testing are also children of the Application component. This concept is also called as Nested Components.
+The other two components - Message and Testing are also children of the Application component with their own child JSX elements. This concept is also called as Nested Components.

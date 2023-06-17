@@ -3,9 +3,9 @@
 ## What is REACT ?
 
 React is a JavaScript library for building user interfaces based on UI
-components. 
+components.
 
-It is is known for its ability to react to changes in data and render the user interface accordingly. 
+It is is known for its ability to react to changes in data and render the user interface accordingly.
 It reacts to changes in state and props and updates the UI to reflect those changes.
 
 React uses a virtual DOM to track changes to the user interface. When data changes, React updates the virtual DOM and compares it to the
@@ -41,13 +41,13 @@ Congratulations !! You have completed your first React JS app.
 
 ## What is JSX ?
 
-JSX (Javascript Script XML) is React's syntax for creating components. 
+JSX (Javascript Script XML) is React's syntax for creating components.
 It looks like HTML, but instead of just describing the structure of a webpage, you can also include JavaScript code to make your components dynamic and interactive.
 
 Please see this file [Counter](https://github.com/hegde421201/REACT_PROJECTS/blob/main/second-app/src/Counter.js) which has a Counter component in React using JSX.
 
 The component stores the current count in a state variable named count and updates the count using a function called handleClick when the user
-clicks the Increment button. 
+clicks the Increment button.
 
 Although the JSX code resembles HTML, we've included JavaScript code within curly braces {} to add interactivity to the component. Specifically, we use the count and handleClick variables to display the current count and handle user input.
 
@@ -58,12 +58,13 @@ Congratulations !! You have completed your second React JS app.
 
 ## What do you mean by props ?
 
-In React, "props" is short for "properties" and is used to pass data from a parent component to a child component. 
+In React, "props" is short for "properties" and is used to pass data from a parent component to a child component.
 
 For example, a parent component could pass the string "Hello, world!" as a prop to a child
 component that displays that text. Props can be any type of data, including strings, numbers, booleans, objects, and functions.
 
 For example, consider the following component:
+
 ```
 function Greetings(props) {
  return <h1>Hello, {props.name}!</h1>;
@@ -87,16 +88,18 @@ ReactDOM.render() is a React method to render a React app to the web page.
 
 ReactDOM.render() takes at least 2 parameters:
 
-1) element (what we want to render)
-2) container (where we want to render) 
+1. element (what we want to render)
+2. container (where we want to render)
 
-See the example [ThirdProgram](https://github.com/hegde421201/REACT_PROJECTS/blob/main/third-app/src/index.js)
+See the example [Application](https://github.com/hegde421201/REACT_PROJECTS/blob/main/third-app/src/index.js)
 
 This js file content is rendered in the index.html file [here](https://github.com/hegde421201/REACT_PROJECTS/blob/main/third-app/public/index.html) in the public folder.
 
 Anything between the opening and the closing div tag in the index.html is where React will render what we have created.
 The <div id="root"></div> is the container for our entire application.
 
-The ThirdProgram is the component which returns the heading4 (h4) element inside the HTML.
-As we can see, we put the HTML element of h4 in the middle of Javascript's code as a parameter. That entire line of code is called JSX.
+The Application is the component which returns the Person components which in turn contains heading2 (h2) element inside the HTML.
+As we can see, we put the HTML element of h2 in the middle of Javascript's code as a parameter. That entire line of code is called JSX.
 JSX is Javascript XML. JSX allows us to write HTML in REACT.
+
+The other two components - Message and Testing are also children of the Application component. This concept is also called as Nested Components.

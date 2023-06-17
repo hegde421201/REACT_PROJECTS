@@ -96,7 +96,12 @@ See the example [Application](https://github.com/hegde421201/REACT_PROJECTS/blob
 This js file content is rendered in the index.html file [here](https://github.com/hegde421201/REACT_PROJECTS/blob/main/third-app/public/index.html) in the public folder.
 
 Anything between the opening and the closing div tag in the index.html is where React will render what we have created.
-The <div id="root"></div> is the container for our entire application.
+
+```
+<div id="root"></div>
+```
+
+The above code snipped in the index.html file is the container for our entire application.
 
 The Application is the component which returns the Person components which in turn contains heading2 (h2) element inside the HTML.
 As we can see, we put the HTML element of h2 in the middle of Javascript's code as a parameter. That entire line of code is called JSX.

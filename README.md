@@ -81,3 +81,22 @@ When the component is used, it can be passed a name prop like so:
 
 In this example, the name prop is passed to the Greeting component with a value of "Moto". The component then renders the message "Hello, Moto!" using the name prop.
 
+## What is ReactDOM.render() ?
+
+ReactDOM.render() is a React method to render a React app to the web page.
+
+ReactDOM.render() takes at least 2 parameters:
+
+1) element (what we want to render)
+2) container (where we want to render) 
+
+See the example [ThirdProgram](https://github.com/hegde421201/REACT_PROJECTS/blob/main/third-app/src/index.js)
+
+This js file content is rendered in the index.html file [here](https://github.com/hegde421201/REACT_PROJECTS/blob/main/third-app/public/index.html) in the public folder.
+
+Anything between the opening and the closing div tag in the index.html is where React will render what we have created.
+The <div id="root"></div> is the container for our entire application.
+
+The ThirdProgram is the component which returns the <h4> element inside the HTML.
+As we can see, we put the HTML element of h4 in the middle of Javascript's code as a parameter. That entire line of code is called JSX.
+JSX is Javascript XML. JSX allows us to write HTML in REACT.

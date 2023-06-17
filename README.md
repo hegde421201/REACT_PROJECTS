@@ -97,6 +97,6 @@ This js file content is rendered in the index.html file [here](https://github.co
 Anything between the opening and the closing div tag in the index.html is where React will render what we have created.
 The <div id="root"></div> is the container for our entire application.
 
-The ThirdProgram is the component which returns the h4 element inside the HTML.
+The ThirdProgram is the component which returns the heading4 (h4) element inside the HTML.
 As we can see, we put the HTML element of h4 in the middle of Javascript's code as a parameter. That entire line of code is called JSX.
 JSX is Javascript XML. JSX allows us to write HTML in REACT.

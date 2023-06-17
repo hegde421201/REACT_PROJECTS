@@ -1,13 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-function ThirdProgram(){
-
+function ThirdProgram() {
   return <h4>this is a component. Awesome!!</h4>;
-
 }
 
-ReactDOM.render(<ThirdProgram/>,document.getElementById('root'));
+ReactDOM.render(<ThirdProgram />, document.getElementById("root"));
 
 /**
 ReactDOM.render() is a React method to render a React app to the web page.

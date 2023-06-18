@@ -13,3 +13,8 @@ We then go on to create a better booklist by creating BetterApp.js file. This in
 First checkout this file [Customised CSS](https://github.com/hegde421201/REACT_PROJECTS/blob/main/fourth-app/src/book.css)
 
 For Props check this out : [PROPS](https://github.com/hegde421201/REACT_PROJECTS/blob/main/fourth-app/src/BetterApp.js)
+
+We have also used an array with 4 elements to populate the books.
+Check out this : [ARRAY](https://github.com/hegde421201/REACT_PROJECTS/blob/main/fourth-app/src/ArrayApp.js)
+
+We also learnt how to destructure the props in the ArrayApp.

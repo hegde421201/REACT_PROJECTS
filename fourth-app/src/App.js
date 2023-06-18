@@ -38,6 +38,10 @@ const Author = () => (
     Morgan Housel
   </h4>
 );
-const Title = () => <h1>The Psychology of Money</h1>;
+
+const Title = () => {
+  const text = "The Psychology of Money";
+  return <h1>{text}</h1>;
+};
 
 export default BookList;

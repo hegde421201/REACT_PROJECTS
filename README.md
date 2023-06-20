@@ -113,6 +113,9 @@ The other two components - Message and Testing are also children of the Applicat
 
 ---
 
-| HOOK     | FILE                                                                                                  |
-| -------- | ----------------------------------------------------------------------------------------------------- |
-| useState | [Click here](https://github.com/hegde421201/REACT_PROJECTS/blob/main/fifth-app/src/usestatebasics.js) |
+| HOOK                    | FILE                                                                                                  |
+| ----------------------- | ----------------------------------------------------------------------------------------------------- |
+| useState                | [Click here](https://github.com/hegde421201/REACT_PROJECTS/blob/main/fifth-app/src/usestatebasics.js) |
+| useState (with array)   | [Click here](https://github.com/hegde421201/REACT_PROJECTS/blob/main/fifth-app/src/arraystate.js)     |
+| useState (with object)  | [Click here](https://github.com/hegde421201/REACT_PROJECTS/blob/main/fifth-app/src/objectstate.js)    |
+| useState (with counter) | [Click here](https://github.com/hegde421201/REACT_PROJECTS/blob/main/fifth-app/src/counterstate.js)   |

@@ -1,12 +1,20 @@
 import "./App.css";
 
-import Setup from "./usestatebasics";
+//import Setup from "./usestatebasics";
+//import ArraySetup from "./arraystate";
+//import ObjectSetup from "./objectstate";
+import CounterSetup from "./counterstate";
 
 function App() {
   return (
     <div className="container">
       <h2>ReactJS Advanced</h2>
-      <Setup></Setup>
+      {
+        /* <Setup></Setup> */
+
+        // <ArraySetup></ArraySetup>
+        <CounterSetup></CounterSetup>
+      }
     </div>
   );
 }

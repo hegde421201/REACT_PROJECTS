@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 let x = "Rest is painful";
-const ErrorExample = () => {
+const UseStateExample = () => {
   //usestate is an array with two elements
   //useState accepts an initial state and returns two values: --- The current state and a function that updates the state.
   const [title, setTitle] = useState(x);
@@ -21,6 +21,6 @@ const ErrorExample = () => {
   );
 };
 
-export default ErrorExample;
+export default UseStateExample;
 
 //

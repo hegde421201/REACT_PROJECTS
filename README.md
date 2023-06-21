@@ -124,3 +124,4 @@ The other two components - Message and Testing are also children of the Applicat
 | useEffect (fetch data)  | [Click here](https://github.com/hegde421201/REACT_PROJECTS/blob/main/sixth-app/src/fetchdata.js)      |
 | Conditional rendering   | [Click here](https://github.com/hegde421201/REACT_PROJECTS/blob/main/sixth-app/src/crendering.js)     |
 | Short circuit           | [Click here](https://github.com/hegde421201/REACT_PROJECTS/blob/main/sixth-app/src/shortcircuit.js)   |
+| Ternary operator        | [Click here](https://github.com/hegde421201/REACT_PROJECTS/blob/main/sixth-app/src/ternary.js)        |

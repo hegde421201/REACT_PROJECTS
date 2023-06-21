@@ -119,3 +119,8 @@ The other two components - Message and Testing are also children of the Applicat
 | useState (with array)   | [Click here](https://github.com/hegde421201/REACT_PROJECTS/blob/main/fifth-app/src/arraystate.js)     |
 | useState (with object)  | [Click here](https://github.com/hegde421201/REACT_PROJECTS/blob/main/fifth-app/src/objectstate.js)    |
 | useState (with counter) | [Click here](https://github.com/hegde421201/REACT_PROJECTS/blob/main/fifth-app/src/counterstate.js)   |
+| useEffect               | [Click here](https://github.com/hegde421201/REACT_PROJECTS/blob/main/sixth-app/src/App.js)            |
+| useEffect (cleanup)     | [Click here](https://github.com/hegde421201/REACT_PROJECTS/blob/main/sixth-app/src/cleanup.js)        |
+| useEffect (fetch data)  | [Click here](https://github.com/hegde421201/REACT_PROJECTS/blob/main/sixth-app/src/fetchdata.js)      |
+| Conditional rendering   | [Click here](https://github.com/hegde421201/REACT_PROJECTS/blob/main/sixth-app/src/crendering.js)     |
+| Short circuit           | [Click here](https://github.com/hegde421201/REACT_PROJECTS/blob/main/sixth-app/src/shortcircuit.js)   |

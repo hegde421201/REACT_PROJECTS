@@ -1,8 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import ConditionalRendering from "./crendering";
+import Ternary from "./ternary";
 import "./index.css";
-import ShortCircuit from "./shortcircuit";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -11,8 +10,9 @@ root.render(
      <UseEffectCleanup />
     <UseEffectFetchData></UseEffectFetchData>
     <ConditionalRendering></ConditionalRendering>
+     <ShortCircuit></ShortCircuit>
     */}
 
-    <ShortCircuit></ShortCircuit>
+    <Ternary></Ternary>
   </React.StrictMode>
 );

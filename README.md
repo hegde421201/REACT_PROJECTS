@@ -113,7 +113,7 @@ The other two components - Message and Testing are also children of the Applicat
 
 ---
 
-| HOOK                    | FILE                                                                                                  |
+| HOOKS                   | FILE                                                                                                  |
 | ----------------------- | ----------------------------------------------------------------------------------------------------- |
 | useState                | [Click here](https://github.com/hegde421201/REACT_PROJECTS/blob/main/fifth-app/src/usestatebasics.js) |
 | useState (with array)   | [Click here](https://github.com/hegde421201/REACT_PROJECTS/blob/main/fifth-app/src/arraystate.js)     |
@@ -125,3 +125,4 @@ The other two components - Message and Testing are also children of the Applicat
 | Conditional rendering   | [Click here](https://github.com/hegde421201/REACT_PROJECTS/blob/main/sixth-app/src/crendering.js)     |
 | Short circuit           | [Click here](https://github.com/hegde421201/REACT_PROJECTS/blob/main/sixth-app/src/shortcircuit.js)   |
 | Ternary operator        | [Click here](https://github.com/hegde421201/REACT_PROJECTS/blob/main/sixth-app/src/ternary.js)        |
+| Show/Hide component     | [Click here](https://github.com/hegde421201/REACT_PROJECTS/blob/main/sixth-app/src/showhide.js)       |

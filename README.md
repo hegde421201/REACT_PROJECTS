@@ -126,3 +126,5 @@ The other two components - Message and Testing are also children of the Applicat
 | Short circuit           | [Click here](https://github.com/hegde421201/REACT_PROJECTS/blob/main/sixth-app/src/shortcircuit.js)   |
 | Ternary operator        | [Click here](https://github.com/hegde421201/REACT_PROJECTS/blob/main/sixth-app/src/ternary.js)        |
 | Show/Hide component     | [Click here](https://github.com/hegde421201/REACT_PROJECTS/blob/main/sixth-app/src/showhide.js)       |
+| Forms and objects - 1   | [Click here](https://github.com/hegde421201/REACT_PROJECTS/blob/main/seventh-app/src/App.js)          |
+| Forms and objects - 2   | [Click here](https://github.com/hegde421201/REACT_PROJECTS/blob/main/seventh-app/src/Multforms.js)    |

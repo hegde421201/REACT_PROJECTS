@@ -1,11 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import MultForms from "./Multforms";
+import UseRefBasics from "./useRefhook";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <MultForms />
+    {/*  <MultForms /> */}
+    <UseRefBasics />
   </React.StrictMode>
 );

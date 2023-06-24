@@ -128,3 +128,4 @@ The other two components - Message and Testing are also children of the Applicat
 | Show/Hide component     | [Click here](https://github.com/hegde421201/REACT_PROJECTS/blob/main/sixth-app/src/showhide.js)       |
 | Forms and objects - 1   | [Click here](https://github.com/hegde421201/REACT_PROJECTS/blob/main/seventh-app/src/App.js)          |
 | Forms and objects - 2   | [Click here](https://github.com/hegde421201/REACT_PROJECTS/blob/main/seventh-app/src/Multforms.js)    |
+| useRef basics           | [Click here](https://github.com/hegde421201/REACT_PROJECTS/blob/main/seventh-app/src/useRefhook.js)   |

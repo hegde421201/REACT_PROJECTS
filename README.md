@@ -113,19 +113,21 @@ The other two components - Message and Testing are also children of the Applicat
 
 ---
 
-| HOOKS                   | FILE                                                                                                  |
-| ----------------------- | ----------------------------------------------------------------------------------------------------- |
-| useState                | [Click here](https://github.com/hegde421201/REACT_PROJECTS/blob/main/fifth-app/src/usestatebasics.js) |
-| useState (with array)   | [Click here](https://github.com/hegde421201/REACT_PROJECTS/blob/main/fifth-app/src/arraystate.js)     |
-| useState (with object)  | [Click here](https://github.com/hegde421201/REACT_PROJECTS/blob/main/fifth-app/src/objectstate.js)    |
-| useState (with counter) | [Click here](https://github.com/hegde421201/REACT_PROJECTS/blob/main/fifth-app/src/counterstate.js)   |
-| useEffect               | [Click here](https://github.com/hegde421201/REACT_PROJECTS/blob/main/sixth-app/src/App.js)            |
-| useEffect (cleanup)     | [Click here](https://github.com/hegde421201/REACT_PROJECTS/blob/main/sixth-app/src/cleanup.js)        |
-| useEffect (fetch data)  | [Click here](https://github.com/hegde421201/REACT_PROJECTS/blob/main/sixth-app/src/fetchdata.js)      |
-| Conditional rendering   | [Click here](https://github.com/hegde421201/REACT_PROJECTS/blob/main/sixth-app/src/crendering.js)     |
-| Short circuit           | [Click here](https://github.com/hegde421201/REACT_PROJECTS/blob/main/sixth-app/src/shortcircuit.js)   |
-| Ternary operator        | [Click here](https://github.com/hegde421201/REACT_PROJECTS/blob/main/sixth-app/src/ternary.js)        |
-| Show/Hide component     | [Click here](https://github.com/hegde421201/REACT_PROJECTS/blob/main/sixth-app/src/showhide.js)       |
-| Forms and objects - 1   | [Click here](https://github.com/hegde421201/REACT_PROJECTS/blob/main/seventh-app/src/App.js)          |
-| Forms and objects - 2   | [Click here](https://github.com/hegde421201/REACT_PROJECTS/blob/main/seventh-app/src/Multforms.js)    |
-| useRef basics           | [Click here](https://github.com/hegde421201/REACT_PROJECTS/blob/main/seventh-app/src/useRefhook.js)   |
+| HOOKS                   | FILE                                                                                                      |
+| ----------------------- | --------------------------------------------------------------------------------------------------------- |
+| useState                | [Click here](https://github.com/hegde421201/REACT_PROJECTS/blob/main/fifth-app/src/usestatebasics.js)     |
+| useState (with array)   | [Click here](https://github.com/hegde421201/REACT_PROJECTS/blob/main/fifth-app/src/arraystate.js)         |
+| useState (with object)  | [Click here](https://github.com/hegde421201/REACT_PROJECTS/blob/main/fifth-app/src/objectstate.js)        |
+| useState (with counter) | [Click here](https://github.com/hegde421201/REACT_PROJECTS/blob/main/fifth-app/src/counterstate.js)       |
+| useEffect               | [Click here](https://github.com/hegde421201/REACT_PROJECTS/blob/main/sixth-app/src/App.js)                |
+| useEffect (cleanup)     | [Click here](https://github.com/hegde421201/REACT_PROJECTS/blob/main/sixth-app/src/cleanup.js)            |
+| useEffect (fetch data)  | [Click here](https://github.com/hegde421201/REACT_PROJECTS/blob/main/sixth-app/src/fetchdata.js)          |
+| Conditional rendering   | [Click here](https://github.com/hegde421201/REACT_PROJECTS/blob/main/sixth-app/src/crendering.js)         |
+| Short circuit           | [Click here](https://github.com/hegde421201/REACT_PROJECTS/blob/main/sixth-app/src/shortcircuit.js)       |
+| Ternary operator        | [Click here](https://github.com/hegde421201/REACT_PROJECTS/blob/main/sixth-app/src/ternary.js)            |
+| Show/Hide component     | [Click here](https://github.com/hegde421201/REACT_PROJECTS/blob/main/sixth-app/src/showhide.js)           |
+| Forms and objects - 1   | [Click here](https://github.com/hegde421201/REACT_PROJECTS/blob/main/seventh-app/src/App.js)              |
+| Forms and objects - 2   | [Click here](https://github.com/hegde421201/REACT_PROJECTS/blob/main/seventh-app/src/Multforms.js)        |
+| useRef basics           | [Click here](https://github.com/hegde421201/REACT_PROJECTS/blob/main/seventh-app/src/useRefhook.js)       |
+| useReducer basics       | [Click here](https://github.com/hegde421201/REACT_PROJECTS/blob/main/seventh-app/src/useReducerHook.js)   |
+| useReducer (better)     | [Click here](https://github.com/hegde421201/REACT_PROJECTS/blob/main/seventh-app/src/useReducerBetter.js) |

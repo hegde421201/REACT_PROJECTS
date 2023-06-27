@@ -131,3 +131,6 @@ The other two components - Message and Testing are also children of the Applicat
 | useRef basics           | [Click here](https://github.com/hegde421201/REACT_PROJECTS/blob/main/seventh-app/src/useRefhook.js)       |
 | useReducer basics       | [Click here](https://github.com/hegde421201/REACT_PROJECTS/blob/main/seventh-app/src/useReducerHook.js)   |
 | useReducer (better)     | [Click here](https://github.com/hegde421201/REACT_PROJECTS/blob/main/seventh-app/src/useReducerBetter.js) |
+| Prop drilling           | [Click here](https://github.com/hegde421201/REACT_PROJECTS/blob/main/seventh-app/src/propdrilling.js)     |
+| Context API             | [Click here](https://github.com/hegde421201/REACT_PROJECTS/blob/main/seventh-app/src/contextapi.js)       |
+| Custom Hooks            | [Click here](https://github.com/hegde421201/REACT_PROJECTS/blob/main/seventh-app/src/customhooks.js)      |

@@ -5,12 +5,11 @@ import defaultImage from "./assets/notfound_image.jpeg";
 //const Product = ({ fields }) => {
 const Product = ({ url, name, price }) => {
   /* const array = fields;
-  const image = fields.image[0].url;
+  const image = fields.image && fields.image[0].url;
   const name = fields.name;
   const price = fields.price;
  */
 
-  console.log(name, price, url);
   return (
     <article className="product">
       <img src={url} alt={name} />

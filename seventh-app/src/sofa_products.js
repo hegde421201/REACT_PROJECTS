@@ -43,7 +43,7 @@ export const data = [
   },
   {
     name: "emperor bed",
-    id: 56,
+    id: 86,
     url: "https://course-api.com/images/store/product-8.jpeg",
     price: 5699,
   },
@@ -59,5 +59,9 @@ export const data = [
     id: 56,
     url: "https://course-api.com/images/store/product-11.jpeg",
   },
-  { url: "https://course-api.com/images/store/product-12.jpeg", price: 1199 },
+  {
+    url: "https://course-api.com/images/store/product-12.jpeg",
+    price: 1199,
+    id: 82,
+  },
 ];

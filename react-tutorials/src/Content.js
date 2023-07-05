@@ -12,9 +12,28 @@ const Content = () => {
     return names[integer];
   };
 
+  const handleClick = () => {
+    console.log("I am clicked!! " + Math.random());
+  };
+
+  const handleClick2 = (name) => {
+    console.log(`I am clicked ${name}`);
+  };
+
+  const handleClick3 = (e) => {
+    console.log(e.target.innerText);
+  };
+
   return (
     <main>
       <p>Hello {handleNameChange()}</p>
+      <button onClick={() => handleClick()}>Click me!!</button>
+      {/* () => is the anonymous function that is called on the click. It calls
+      handleClick2 on the click */}
+      <button onClick={() => handleClick2("Hegde")}>Name button</button>
+
+      {/*(e) stands for event */}
+      <button onDoubleClick={(e) => handleClick3(e)}>Event button</button>
     </main>
   );
 };

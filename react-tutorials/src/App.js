@@ -4,6 +4,7 @@ import Content from "./Content";
 import Lorem from "./Lorem";
 import Footer from "./Footer";
 import StateContent from "./StateContent";
+import ListsKeys from "./ListsKeys";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <StateContent />
       <Lorem totWords={2} totSentences={12} />
 
+      <ListsKeys></ListsKeys>
       <Footer></Footer>
     </div>
   );

@@ -9,7 +9,7 @@ import StateHooks from "./StateHooks";
 function App() {
   return (
     <div className="App">
-      <Header />
+      <Header title="Groceries List"/>
       <Content />
       <StateContent />
       <Lorem totWords={2} totSentences={12} />

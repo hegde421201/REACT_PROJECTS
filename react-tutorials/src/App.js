@@ -5,6 +5,9 @@ import Lorem from "./Lorem";
 import Footer from "./Footer";
 import StateContent from "./StateContent";
 import StateHooks from "./StateHooks";
+import React, { useState, useEffect } from "react";
+
+import Watermark from "./Watermark";
 
 function App() {
   const [items, setItems] = useState([
@@ -27,13 +30,15 @@ function App() {
   ]);
   return (
     <div className="App">
-      <Header title="Groceries List" />
+      {/*  <Header title="Groceries List" />
       <Content />
       <StateContent />
       <Lorem totWords={2} totSentences={12} />
 
       <StateHooks></StateHooks>
-      <Footer></Footer>
+      <Footer></Footer> */}
+
+      <Watermark></Watermark>
     </div>
   );
 }

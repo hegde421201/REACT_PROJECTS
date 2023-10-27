@@ -35,17 +35,17 @@ const Watermark = () => {
         //  let jsonData = findSubstrings(message.data, "{", "}");
         //  processMessages(jsonData);
 
-        // let jsonData = findSubstrings(message.data, "{", "}");
-        // let image64 = processMessages(jsonData);
+        let jsonData = findSubstrings(message.data, "{", "}");
+        let image64 = processMessages(jsonData);
 
-        // setGeneratedImage(image64);
+        setGeneratedImage(image64);
 
         const canvas = canvasRef.current;
         const ctx = canvas.getContext("2d");
 
         const image = new Image();
-        //image.src = "data:image/jpeg;base64," + image64; // Load image result
-        image.src = process.env.PUBLIC_URL + "/rhinos.jpg"; // Load image from the public directory
+        image.src = "data:image/jpeg;base64," + image64; // Load image result
+        //image.src = process.env.PUBLIC_URL + "/rhinos.jpg"; // Load image from the public directory
 
         image.onload = () => {
           canvas.width = image.width;
@@ -67,7 +67,7 @@ const Watermark = () => {
             "rgba(255, 255, 255, " + alphaValue.toPrecision(2) + ")"; // Set text color with opacity
  */
           ctx.font = jsonDataWatermark.textSize + "px Arial"; // Set the font style and size
-          ctx.fillStyle = "rgba(255, 0, 0, 0.5)"; // Set text color with opacity
+          ctx.fillStyle = "rgba(255, 0, 0, 0.99)"; // Set text color with opacity
           // Add a text watermark
           // Draw the watermark text on the canvas
           let x_axis = jsonDataWatermark.x_axis;

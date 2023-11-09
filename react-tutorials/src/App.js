@@ -30,15 +30,14 @@ function App() {
   ]);
   return (
     <div className="App">
-      {/*  <Header title="Groceries List" />
+      <Header title="Groceries List" />
       <Content />
       <StateContent />
       <Lorem totWords={2} totSentences={12} />
 
       <StateHooks></StateHooks>
-      <Footer></Footer> */}
-
-      <Watermark></Watermark>
+      <Footer></Footer>
+      {/*  <Watermark></Watermark> */}
     </div>
   );
 }

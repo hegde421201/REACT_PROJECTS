@@ -7,7 +7,7 @@ import StateContent from "./StateContent";
 import React, { useState } from "react";
 import AddItem from "./AddItem";
 import Propdrills from "./Propdrills";
-
+import SearchItem from "./SearchItem";
 function App() {
   /* const [items, setItems] = useState([
     {
@@ -31,6 +31,8 @@ function App() {
   const [items, setItems] = useState(
     JSON.parse(localStorage.getItem("shoppinglist"))
   );
+
+  const [search, setSearch] = useState("");
 
   const setAndSaveItems = (listItems) => {
     setItems(listItems); //update using useState hook the itemlist
@@ -85,6 +87,7 @@ function App() {
   return (
     <div className="App">
       <Header title="Groceries List" />
+      <SearchItem search={search} setSearch={setSearch}></SearchItem>
       <AddItem
         newItem={newItem}
         setNewItem={setNewItem}
@@ -96,7 +99,9 @@ function App() {
 
       {/*  <StateHooks></StateHooks> */}
       <Propdrills
-        items={items}
+        items={items.filter((i) =>
+          i.item.toLowerCase().includes(search.toLowerCase())
+        )}
         handleCheck={handleCheck}
         handleDelete={handleDelete}
       ></Propdrills>

@@ -8,7 +8,15 @@ import React, { useState } from "react";
 import AddItem from "./AddItem";
 import Propdrills from "./Propdrills";
 import SearchItem from "./SearchItem";
+
+import Square from "./colorChanger/Square";
+import Input from "./colorChanger/Input";
+
 function App() {
+  const [colorValue, setColorValue] = useState("");
+  const [hexValue, setHexValue] = useState("");
+  const [isDarkText, setIsDarkText] = useState(true);
+
   /* const [items, setItems] = useState([
     {
       id: 1,
@@ -84,7 +92,29 @@ function App() {
     setNewItem("");
   };
 
+  {
+    /*  <StateHooks></StateHooks> */
+    /*  <Watermark></Watermark> */
+  }
+
   return (
+    <div className="App">
+      <Square
+        colorValue={colorValue}
+        hexValue={hexValue}
+        isDarkText={isDarkText}
+      ></Square>
+      <Input
+        isDarkText={isDarkText}
+        setIsDarkText={setIsDarkText}
+        colorValue={colorValue}
+        setColorValue={setColorValue}
+        setHexValue={setHexValue}
+      ></Input>
+    </div>
+  );
+
+  /*  return (
     <div className="App">
       <Header title="Groceries List" />
       <SearchItem search={search} setSearch={setSearch}></SearchItem>
@@ -97,7 +127,6 @@ function App() {
       <StateContent />
       <Lorem totWords={2} totSentences={12} />
 
-      {/*  <StateHooks></StateHooks> */}
       <Propdrills
         items={items.filter((i) =>
           i.item.toLowerCase().includes(search.toLowerCase())
@@ -106,9 +135,8 @@ function App() {
         handleDelete={handleDelete}
       ></Propdrills>
       <Footer length={items.length}></Footer>
-      {/*  <Watermark></Watermark> */}
     </div>
-  );
+  ); */
 }
 
 export default App;

@@ -4,7 +4,7 @@ import Content from "./Content";
 import Lorem from "./Lorem";
 import Footer from "./Footer";
 import StateContent from "./StateContent";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import AddItem from "./AddItem";
 import Propdrills from "./Propdrills";
 import SearchItem from "./SearchItem";
@@ -17,7 +17,7 @@ function App() {
   const [hexValue, setHexValue] = useState("");
   const [isDarkText, setIsDarkText] = useState(true);
 
-  /* const [items, setItems] = useState([
+  const [items, setItems] = useState([
     {
       id: 1,
       checked: false,
@@ -34,20 +34,19 @@ function App() {
       checked: false,
       item: "Sugar",
     },
-  ]); */
+  ]);
 
-  const [items, setItems] = useState(
+  /*  const [items, setItems] = useState(
     JSON.parse(localStorage.getItem("shoppinglist"))
-  );
+  ); */
 
   const [search, setSearch] = useState("");
 
-  const setAndSaveItems = (listItems) => {
-    setItems(listItems); //update using useState hook the itemlist
-    localStorage.setItem("shoppinglist", JSON.stringify(listItems));
-  };
-
   const [newItem, setNewItem] = useState("");
+
+  useEffect(() => {
+    console.log("loaded");
+  }, [items]);
 
   //handler for the checkbox state ----toggle true or false---this handlecheck function is called by the anonymous function
   const handleCheck = (id) => {
@@ -97,7 +96,7 @@ function App() {
     /*  <Watermark></Watermark> */
   }
 
-  return (
+  /* return (
     <div className="App">
       <Square
         colorValue={colorValue}
@@ -112,9 +111,14 @@ function App() {
         setHexValue={setHexValue}
       ></Input>
     </div>
-  );
+  ); */
 
-  /*  return (
+  const setAndSaveItems = (listItems) => {
+    setItems(listItems); //update using useState hook the itemlist
+    localStorage.setItem("shoppinglist", JSON.stringify(listItems));
+  };
+
+  return (
     <div className="App">
       <Header title="Groceries List" />
       <SearchItem search={search} setSearch={setSearch}></SearchItem>
@@ -123,20 +127,22 @@ function App() {
         setNewItem={setNewItem}
         handleSubmit={handleSubmit}
       />
+
+      {/*   
       <Content />
       <StateContent />
-      <Lorem totWords={2} totSentences={12} />
+      <Lorem totWords={2} totSentences={12} /> */}
 
       <Propdrills
-        items={items.filter((i) =>
-          i.item.toLowerCase().includes(search.toLowerCase())
+        items={items.filter((item) =>
+          item.item.toLowerCase().includes(search.toLowerCase())
         )}
         handleCheck={handleCheck}
         handleDelete={handleDelete}
       ></Propdrills>
       <Footer length={items.length}></Footer>
     </div>
-  ); */
+  );
 }
 
 export default App;

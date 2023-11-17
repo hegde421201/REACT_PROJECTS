@@ -12,12 +12,13 @@ import SearchItem from "./SearchItem";
 import Square from "./colorChanger/Square";
 import Input from "./colorChanger/Input";
 
+//npx json-server -p 3500 -w data/db.json
 function App() {
   const [colorValue, setColorValue] = useState("");
   const [hexValue, setHexValue] = useState("");
   const [isDarkText, setIsDarkText] = useState(true);
 
-  const [items, setItems] = useState([
+  /* const [items, setItems] = useState([
     {
       id: 1,
       checked: false,
@@ -34,19 +35,51 @@ function App() {
       checked: false,
       item: "Sugar",
     },
-  ]);
+  ]); */
 
-  /*  const [items, setItems] = useState(
-    JSON.parse(localStorage.getItem("shoppinglist"))
+  /* const [items, setItems] = useState(
+    JSON.parse(localStorage.getItem("shoppinglist") || [])
   ); */
+
+  const [items, setItems] = useState([]);
 
   const [search, setSearch] = useState("");
 
   const [newItem, setNewItem] = useState("");
+  const [fetchError, setFetchError] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+
+  const API_URL = "http://localhost:3500/items";
+
+  /* useEffect(() => {
+
+    console.log("loaded");
+    localStorage.setItem("shoppinglist", JSON.stringify(items));
+  }, [items]); */
 
   useEffect(() => {
-    console.log("loaded");
-  }, [items]);
+    const fetchItems = async () => {
+      try {
+        const response = await fetch(API_URL);
+
+        if (!response.ok) throw Error("Did not receive expected data");
+        const listItems = await response.json();
+        console.log(listItems);
+        setItems(listItems);
+        setFetchError(null);
+      } catch (err) {
+        setFetchError(err.message);
+        console.error(err.message);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    setTimeout(() => {
+      //IIFE
+      (async () => await fetchItems())();
+    }, 2000);
+  }, []);
 
   //handler for the checkbox state ----toggle true or false---this handlecheck function is called by the anonymous function
   const handleCheck = (id) => {
@@ -115,7 +148,6 @@ function App() {
 
   const setAndSaveItems = (listItems) => {
     setItems(listItems); //update using useState hook the itemlist
-    localStorage.setItem("shoppinglist", JSON.stringify(listItems));
   };
 
   return (
@@ -132,14 +164,21 @@ function App() {
       <Content />
       <StateContent />
       <Lorem totWords={2} totSentences={12} /> */}
-
-      <Propdrills
-        items={items.filter((item) =>
-          item.item.toLowerCase().includes(search.toLowerCase())
+      <main>
+        {isLoading && <p>Loading Items...</p>}
+        {fetchError && (
+          <p style={{ color: "red" }}>{`Error : ${fetchError}`}</p>
         )}
-        handleCheck={handleCheck}
-        handleDelete={handleDelete}
-      ></Propdrills>
+        {!fetchError && !isLoading && (
+          <Propdrills
+            items={items.filter((item) =>
+              item.item.toLowerCase().includes(search.toLowerCase())
+            )}
+            handleCheck={handleCheck}
+            handleDelete={handleDelete}
+          ></Propdrills>
+        )}
+      </main>
       <Footer length={items.length}></Footer>
     </div>
   );

@@ -17,7 +17,7 @@ const Propdrills = ({ items, handleCheck, handleDelete }) => {
     /* {items.length  is the ternary expression to check whether the item list is 
       empty or not. If true then it includes the unordered list or 
       else it includes the empty shopping list message */
-    <main>
+    <>
       {items.length ? (
         <ItemList
           items={items}
@@ -27,7 +27,7 @@ const Propdrills = ({ items, handleCheck, handleDelete }) => {
       ) : (
         <p style={{ marginTop: "2rem" }}>Shopping list empty</p>
       )}
-    </main>
+    </>
   );
 };
 

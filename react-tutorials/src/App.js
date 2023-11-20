@@ -8,7 +8,7 @@ import React, { useEffect, useState } from "react";
 import AddItem from "./AddItem";
 import Propdrills from "./Propdrills";
 import SearchItem from "./SearchItem";
-
+import apiRequest from "./apiRequest";
 import Square from "./colorChanger/Square";
 import Input from "./colorChanger/Input";
 
@@ -82,7 +82,7 @@ function App() {
   }, []);
 
   //handler for the checkbox state ----toggle true or false---this handlecheck function is called by the anonymous function
-  const handleCheck = (id) => {
+  const handleCheck = async (id) => {
     console.log(`key : ${id}`); //using the template literal
 
     //to see the change in state we again use the map function and iterate the list. We are checking whether the item is is equal to the id paramter passed
@@ -99,21 +99,56 @@ function App() {
     //when the above checkbox is checked then look at this ---
     //style={item.checked ? { textDecoration: "line-through" } : null} ----> this ensures that the label is underlined
     setAndSaveItems(itemsList);
+
+    const myItem = itemsList.filter((item) => item.id === id);
+    const updateOptions = {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ checked: myItem[0].checked }),
+    };
+
+    const requestUrl = `${API_URL}/${id}`;
+
+    const result = await apiRequest(requestUrl, updateOptions);
+
+    if (result) setFetchError(result);
   };
 
-  const handleDelete = (id) => {
+  const handleDelete = async (id) => {
     console.log(id);
 
     //filter function ensures that the item id not equal to the prop id is filtered out or removed from the array
     const listItems = items.filter((i) => i.id !== id);
     setAndSaveItems(listItems);
+
+    const deleteOptions = { method: "DELETE" };
+
+    const requestUrl = `${API_URL}/${id}`;
+
+    const result = await apiRequest(requestUrl, deleteOptions);
+
+    if (result) setFetchError(result);
   };
 
-  const addItem = (item) => {
+  const addItem = async (item) => {
     const id = items.length ? items[items.length - 1].id + 1 : 1;
     const myNewItem = { id, checked: false, item };
     const listItems = [...items, myNewItem];
     setAndSaveItems(listItems);
+
+    const postRequestOptions = {
+      method: "POST",
+
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(myNewItem),
+    };
+
+    const result = await apiRequest(API_URL, postRequestOptions);
+    if (result) setFetchError(result);
   };
 
   const handleSubmit = (e) => {

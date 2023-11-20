@@ -22,6 +22,7 @@ function AppRouter() {
   const [editTitle, setEditTitle] = useState("");
   const [editBody, setEditBody] = useState("");
   const history = useHistory();
+  const { width } = useWindowSize();
 
   const handleDelete = async (id) => {
     try {
@@ -104,7 +105,7 @@ function AppRouter() {
 
   return (
     <div className="AppRouter">
-      <Header title="React JS Blog"></Header>
+      <Header title="React JS Blog" width={width}></Header>
       <Nav search={search} setSearch={setSearch}></Nav>
       <Switch>
         <Route exact path="/">

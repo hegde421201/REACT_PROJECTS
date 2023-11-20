@@ -12,6 +12,7 @@ import { Route, Switch, useHistory } from "react-router-dom";
 import { format } from "date-fns";
 import api from "./api/posts";
 import useWindowSize from "./hooks/useWindowSize";
+import useAxiosFetch from "./hooks/useAxiosFetch";
 
 function AppRouter() {
   const [posts, setPosts] = useState([]);
@@ -23,6 +24,13 @@ function AppRouter() {
   const [editBody, setEditBody] = useState("");
   const history = useHistory();
   const { width } = useWindowSize();
+  const { data, fetchError, isLoading } = useAxiosFetch(
+    "http://localhost:3500/posts"
+  );
+
+  useEffect(() => {
+    setPosts(data);
+  }, [data]);
 
   const handleDelete = async (id) => {
     try {
@@ -109,7 +117,11 @@ function AppRouter() {
       <Nav search={search} setSearch={setSearch}></Nav>
       <Switch>
         <Route exact path="/">
-          <Home posts={searchResults}></Home>
+          <Home
+            fetchError={fetchError}
+            isLoading={isLoading}
+            posts={searchResults}
+          ></Home>
         </Route>
         <Route exact path="/post">
           <NewPost

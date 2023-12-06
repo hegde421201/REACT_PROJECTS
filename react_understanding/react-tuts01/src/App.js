@@ -1,6 +1,7 @@
 import "./App.css";
 import React, { useState } from "react";
 import LazyInitial from "./components/LazyInitial";
+import EventHandle from "./components/EventHandle";
 
 function initialState() {
   console.log("Expensive process " + Date.now());
@@ -21,10 +22,17 @@ function App() {
       <h2>{x}</h2>
       <button onClick={addNumber}>Increment</button>
       <button onClick={() => setX(x + 2)}>Increment by 2</button>
+      {/* <LazyInitial /> 
+       
+      */}
 
-      <LazyInitial />
+      <EventHandle />
     </div>
   );
 }
 
 export default App;
+
+/**
+      
+ */

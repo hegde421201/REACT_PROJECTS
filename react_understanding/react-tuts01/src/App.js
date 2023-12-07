@@ -1,10 +1,11 @@
 import "./App.css";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import LazyInitial from "./components/LazyInitial";
 import EventHandle from "./components/EventHandle";
 import Literals from "./components/Literals";
 import ClassComponent from "./components/ClassComponent";
 import UseEffecthook from "./components/UseEffecthook";
+import ShowXY from "./components/ShowXY";
 
 function initialState() {
   console.log("Expensive process " + Date.now());
@@ -19,19 +20,29 @@ function App() {
   const addNumber = () => {
     setCount(count + 1);
   };
+
+  useEffect(() => {
+    console.log("see me see me");
+
+    return () => {
+      console.log("clean up code");
+    };
+  });
+
   return (
     <div className="App">
       <h1>{count}</h1>
       <h2>{x}</h2>
       <button onClick={addNumber}>Increment</button>
-      <button onClick={() => setX(x + 2)}>Increment by 2</button>
+      <button onClick={() => setX(x + 1)}>Increment by 2</button>
       {/* <LazyInitial /> 
        <EventHandle />
         <Literals />
          <ClassComponent />
+         <UseEffecthook />
       */}
 
-      <UseEffecthook />
+      {x % 2 === 0 ? <ShowXY /> : <EventHandle />}
     </div>
   );
 }

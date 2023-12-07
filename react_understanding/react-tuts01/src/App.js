@@ -2,6 +2,9 @@ import "./App.css";
 import React, { useState } from "react";
 import LazyInitial from "./components/LazyInitial";
 import EventHandle from "./components/EventHandle";
+import Literals from "./components/Literals";
+import ClassComponent from "./components/ClassComponent";
+import UseEffecthook from "./components/UseEffecthook";
 
 function initialState() {
   console.log("Expensive process " + Date.now());
@@ -23,10 +26,12 @@ function App() {
       <button onClick={addNumber}>Increment</button>
       <button onClick={() => setX(x + 2)}>Increment by 2</button>
       {/* <LazyInitial /> 
-       
+       <EventHandle />
+        <Literals />
+         <ClassComponent />
       */}
 
-      <EventHandle />
+      <UseEffecthook />
     </div>
   );
 }

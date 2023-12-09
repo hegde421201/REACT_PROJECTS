@@ -6,7 +6,10 @@ import Literals from "./components/Literals";
 import ClassComponent from "./components/ClassComponent";
 import UseEffecthook from "./components/UseEffecthook";
 import ShowXY from "./components/ShowXY";
-
+import UseRefHook from "./components/UseRefHook";
+import UseCallBackHook from "./components/UseCallBackHook";
+import ListKeys from "./components/ListKeys";
+import EmbedList from "./components/EmbedList";
 function initialState() {
   console.log("Expensive process " + Date.now());
   return 0;
@@ -40,9 +43,13 @@ function App() {
         <Literals />
          <ClassComponent />
          <UseEffecthook />
+          {x % 2 === 0 ? <ShowXY /> : <EventHandle />}
+            <UseRefHook />
+             <UseCallBackHook />
+              <ListKeys />
       */}
 
-      {x % 2 === 0 ? <ShowXY /> : <EventHandle />}
+      <EmbedList />
     </div>
   );
 }

@@ -3,13 +3,22 @@ import React, { useEffect, useState } from "react";
 const ShowXY = () => {
   const [showXY, setXY] = useState("0,0");
   const [data, setData] = useState(true);
+
+  const displayXY = (e) => {
+    let strings = e.pageX + "," + e.pageY;
+    setXY(strings);
+  };
+
   useEffect(() => {
-    console.log(
-      "Render or re-render --- i m called!!. What is your damn logic?"
-    );
+    window.addEventListener("mousemove", displayXY);
+
+    console.log("Render or re-render --- i m called!!. What is your logic?");
 
     return () => {
-      console.log("return man return!!");
+      console.log("return man return clean up code!!");
+
+      //if you want to unsubscribe above event listener then do the following
+      //  window.removeEventListener("mousemove", displayXY);
     };
   }, [showXY]);
 
@@ -19,6 +28,8 @@ const ShowXY = () => {
       {data === true ? <p>{data.toString()}</p> : <p>{showXY}</p>}
       <br></br>
       <button onClick={() => setData(!data)}> Toggle </button>
+      <br></br>
+      <p>{showXY}</p>
     </div>
   );
 };

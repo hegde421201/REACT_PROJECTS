@@ -43,3 +43,10 @@
   color: red;
   font-size: 15px;
 }
+
+.list-item {
+  list-style-type: square;
+  color: red;
+  font-size: larger;
+  margin: 10px 10;
+}

@@ -10,6 +10,8 @@ import UseRefHook from "./components/UseRefHook";
 import UseCallBackHook from "./components/UseCallBackHook";
 import ListKeys from "./components/ListKeys";
 import EmbedList from "./components/EmbedList";
+import SpreadProp from "./components/SpreadProp";
+
 function initialState() {
   console.log("Expensive process " + Date.now());
   return 0;
@@ -47,9 +49,10 @@ function App() {
             <UseRefHook />
              <UseCallBackHook />
               <ListKeys />
+              <EmbedList />
       */}
 
-      <EmbedList />
+      <SpreadProp />
     </div>
   );
 }

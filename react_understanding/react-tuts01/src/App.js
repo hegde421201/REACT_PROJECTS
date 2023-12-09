@@ -11,6 +11,7 @@ import UseCallBackHook from "./components/UseCallBackHook";
 import ListKeys from "./components/ListKeys";
 import EmbedList from "./components/EmbedList";
 import SpreadProp from "./components/SpreadProp";
+import FragComponent from "./components/FragComponent";
 
 function initialState() {
   console.log("Expensive process " + Date.now());
@@ -50,9 +51,10 @@ function App() {
              <UseCallBackHook />
               <ListKeys />
               <EmbedList />
+               <SpreadProp />
       */}
 
-      <SpreadProp />
+      <FragComponent />
     </div>
   );
 }

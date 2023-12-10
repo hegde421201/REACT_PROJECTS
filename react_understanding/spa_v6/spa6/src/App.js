@@ -2,11 +2,31 @@ import "./App.css";
 import Home from "./components/Home";
 import Products from "./components/Products";
 import About from "./components/About";
-import { Route, Routes, Link } from "react-router-dom";
+import { Route, Routes, Link, useRoutes } from "react-router-dom";
 import ProductDetail from "./components/ProductDetail";
 import NotFound from "./components/NotFound";
 
 function App() {
+  let routeElements = useRoutes([
+    {
+      path: "/",
+      children: [
+        { path: "/home", index: true, element: <Home /> },
+        { path: "/about", element: <About /> },
+        {
+          path: "/products",
+          element: <Products />,
+          children: [
+            {
+              path: ":id",
+              element: <ProductDetail />,
+            },
+          ],
+        },
+        { path: "*", element: <NotFound /> },
+      ],
+    },
+  ]);
   return (
     <div className="App">
       <ul>
@@ -21,22 +41,22 @@ function App() {
           </Link>
         </li>
         <li>
-          <Link to="/" style={{ textDecoration: "none" }}>
+          <Link to="/about" style={{ textDecoration: "none" }}>
             About
           </Link>
         </li>
       </ul>
-
-      <Routes>
+      {routeElements}
+      {/*  <Routes>
         <Route path="/">
           <Route index={true} element={<Home />} />
-          <Route path="/" element={<About />} />
+          <Route path="/about" element={<About />} />
           <Route path="/products" element={<Products />}>
             <Route path=":id" element={<ProductDetail />} />
           </Route>
           <Route path="*" element={<NotFound />}></Route>
         </Route>
-      </Routes>
+      </Routes> */}
     </div>
   );
 }

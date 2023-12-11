@@ -1,11 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { Navigate, useNavigate } from "react-router-dom";
 
 const NotFound = () => {
-  return (
-    <>
-      <h1>404 Not found</h1>
-    </>
-  );
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    setTimeout(() => {
+      navigate("/home");
+    }, 2000);
+  }, []);
+
+  return <h1>404 not found</h1>;
+  // return <Navigate to="/home" />;
 };
 
 export default NotFound;

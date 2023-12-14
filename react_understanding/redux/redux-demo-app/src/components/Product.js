@@ -1,4 +1,5 @@
 import React from "react";
+import { v4 as uuidv4 } from "uuid";
 
 const Product = () => {
   const products = [
@@ -9,8 +10,16 @@ const Product = () => {
   ];
   return (
     <div className="customDiv">
+      <h3>Product</h3>
+      <hr></hr>
       <select>
-        <option></option>
+        {products.map((item, index) => {
+          return (
+            <option value={products.price} key={uuidv4()}>
+              {item.pname}- &#8377;{item.price}
+            </option>
+          );
+        })}
       </select>
     </div>
   );

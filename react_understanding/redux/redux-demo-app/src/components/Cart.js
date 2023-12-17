@@ -1,13 +1,16 @@
 import React from "react";
 import { v4 as uuidv4 } from "uuid";
 import { DELETE } from "./actions";
+import { deleteItem } from "../slices/productSlice";
 import { useSelector, useDispatch } from "react-redux";
+
 const Cart = () => {
   const loginDetails = useSelector((state) => state.lr.loginDetails);
   const cart = useSelector((state) => state.pr.cart);
   const dispatch = useDispatch();
   const deleteHandler = (index, price) => {
-    dispatch({ type: DELETE, payload: { index, price } });
+    // dispatch({ type: DELETE, payload: { index, price } });
+    dispatch(deleteItem({ index, price }));
   };
   const handleKeyDown = () => {
     console.log();

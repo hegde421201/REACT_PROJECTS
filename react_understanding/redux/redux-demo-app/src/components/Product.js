@@ -1,6 +1,7 @@
 import React from "react";
 import { v4 as uuidv4 } from "uuid";
 import { PURCHASE } from "./actions";
+import { purchase } from "../slices/productSlice";
 import { useSelector, useDispatch } from "react-redux";
 
 const Product = () => {
@@ -19,7 +20,8 @@ const Product = () => {
     let price = e.target.value;
     let obj = { pname, price };
 
-    dispatch({ type: PURCHASE, payload: obj });
+    //dispatch({ type: PURCHASE, payload: obj });
+    dispatch(purchase(obj));
 
     //  console.log("Event handler - purchase " + pname);
   };

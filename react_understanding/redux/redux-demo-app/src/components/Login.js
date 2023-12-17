@@ -1,13 +1,16 @@
 import { useDispatch, useSelector } from "react-redux";
 import React from "react";
 import { v4 as uuidv4 } from "uuid";
-import { LOGIN } from "./actions";
+import { validateUser, LOGIN } from "./actions";
+import { userLogin } from "../slices/loginSlice";
 const Login = () => {
   const users = useSelector((state) => state.lr.users);
   const dispatch = useDispatch();
   const loginHandler = (e) => {
     let loginDetails = e.target.options[e.target.selectedIndex].text;
-    dispatch({ type: LOGIN, payload: loginDetails });
+    // dispatch({ type: LOGIN, payload: loginDetails });
+    dispatch(validateUser(loginDetails));
+    // dispatch(userLogin(loginDetails));
   };
   return (
     <div className="customDiv">

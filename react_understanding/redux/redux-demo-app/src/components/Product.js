@@ -1,11 +1,13 @@
 import React from "react";
 import { v4 as uuidv4 } from "uuid";
-
+import { PURCHASE } from "./actions";
 import { useSelector, useDispatch } from "react-redux";
 
 const Product = () => {
   const dispatch = useDispatch();
-  const products = useSelector((state) => state.products); //useselector hook provides us with access to piece of
+  const products = useSelector((state) => state.pr.products);
+  const loginDetails = useSelector((state) => state.lr.loginDetails);
+  //useselector hook provides us with access to piece of
   //data from the store --- we can access this pice of data using the state variable which has access to the
   //entire store or refers to the global state
 
@@ -17,13 +19,13 @@ const Product = () => {
     let price = e.target.value;
     let obj = { pname, price };
 
-    dispatch({ type: "PURCHASE", payload: obj });
+    dispatch({ type: PURCHASE, payload: obj });
 
     //  console.log("Event handler - purchase " + pname);
   };
   return (
     <div className="customDiv">
-      <h3>Product</h3>
+      <h3>Product - User {loginDetails}</h3>
       <hr></hr>
       <select onChange={(e) => purchaseHandler(e)}>
         {products.map((item, index) => {

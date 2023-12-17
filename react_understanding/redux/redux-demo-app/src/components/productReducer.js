@@ -1,4 +1,4 @@
-import { createStore } from "redux";
+import * as actions from "./actions";
 
 const initData = {
   products: [
@@ -11,10 +11,10 @@ const initData = {
   total: 0,
 };
 
-const reducer = (state = initData, action) => {
+const productReducer = (state = initData, action) => {
   //action receives the object literal from dispatch
   console.log("ACTION", action);
-  if (action.type === "PURCHASE") {
+  if (action.type === actions.PURCHASE) {
     //action is purchase---meaning when an option is selected -- that needs to be added to the cart
     //so here update the cart object inside the initData or the state of the reducer variable
 
@@ -29,21 +29,20 @@ const reducer = (state = initData, action) => {
       cart: [...state.cart, action.payload],
       total: state.total + parseInt(action.payload.price),
     };
-  } else if (action.type === "DELETE") {
+  } else if (action.type === actions.DELETE) {
     return {
       ...state,
-      cart: state.cart.filter((item, index) => index !== action.payload),
+      cart: state.cart.filter((item, index) => index !== action.payload.index),
       total: state.total - action.payload.price,
       //filter is used wherein the index of the cart items not matching the clicked item will be retained in the cart array. Thus the index clicked is removed
       //from the cart
     };
   }
+
   return state;
 };
 
-const store = createStore(reducer);
-
-export default store;
+export default productReducer;
 
 /**
  The <Provider> component makes the redux store available to any nested components that need access
